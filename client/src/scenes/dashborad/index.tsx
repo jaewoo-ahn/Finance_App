@@ -3,7 +3,9 @@ import {
   gridTemplateLargeScreens,
   gridTemplateSmallScreens,
 } from "./gridTemplate";
-import DashboardBox from "@/components/DashboardBox";
+import Row1 from "./Row1";
+import Row2 from "./Row2";
+import Row3 from "./Row3";
 
 type Props = {};
 
@@ -31,16 +33,9 @@ const Dashboard = (props: Props) => {
             }
       }
     >
-      <DashboardBox gridArea="a"></DashboardBox>
-      <DashboardBox gridArea="b"></DashboardBox>
-      <DashboardBox gridArea="c"></DashboardBox>
-      <DashboardBox gridArea="d"></DashboardBox>
-      <DashboardBox gridArea="e"></DashboardBox>
-      <DashboardBox gridArea="f"></DashboardBox>
-      <DashboardBox gridArea="g"></DashboardBox>
-      <DashboardBox gridArea="h"></DashboardBox>
-      <DashboardBox gridArea="i"></DashboardBox>
-      <DashboardBox gridArea="j"></DashboardBox>
+      <Row1 />
+      <Row2 />
+      <Row3 />
     </Box>
   );
 };
