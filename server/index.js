@@ -5,6 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
+import kpiRoutes from "./routes/kpi.js";
 
 // CMT configurations
 dotenv.config();
@@ -17,13 +18,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+// CMT route
+app.use("/kpi", kpiRoutes);
+
 // CMT mongoose setup
 
 const PORT = process.env.PORT || 9000;
 mongoose
   .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
