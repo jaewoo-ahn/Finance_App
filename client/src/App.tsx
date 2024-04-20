@@ -6,6 +6,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Box } from "@mui/system";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashborad";
+import Predictions from "./scenes/predictions";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
@@ -19,7 +20,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/predictions" element={<div>prediction page</div>} />
+              <Route path="/predictions" element={<Predictions />} />
             </Routes>
           </Box>
         </ThemeProvider>
